@@ -1,0 +1,9 @@
+{
+  "name": "la-maison-lab4",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лабораторная работа №4 — современный CSS и ООП в JavaScript",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

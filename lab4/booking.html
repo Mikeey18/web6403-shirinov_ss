@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ресторан La Maison - вкусная еда и уютная атмосфера">
+        <title>Бронирование - La Maison</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container site-header__inner">
+                <a class="brand" href="index.html">
+                    <img src="img/LOGO.png" alt="Логотип ресторана"><span>LA MAISON</span>
+                </a>
+                <nav class="nav" aria-label="Основная навигация">
+                    <a href="index.html" >ГЛАВНАЯ</a>
+                    <a href="menu.html" >МЕНЮ</a>
+                    <a href="about.html" >О НАС</a>
+                    <a href="booking.html" aria-current="page">БРОНЬ</a>
+                </nav>
+                <a class="button" href="booking.html">ЗАКАЗАТЬ СТОЛИК</a>
+            </div>
+        </header>
+        <main>
+            <section class="page-intro">
+                <div class="container">
+                    <div class="eyebrow">Планируйте свой вечер</div>
+                    <h1>Бронирование <span style="color:var(--color-accent)">столика</span></h1>
+                    <p>Заполните форму, и мы свяжемся с вами для подтверждения.</p>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container booking-layout">
+                    <aside class="booking-note">
+                        <div class="eyebrow">Будем рады видеть вас</div>
+                        <h2>Ваш вечер начинается здесь</h2>
+                        <p>Оставьте контактные данные и пожелания. После отправки заявки данные будут переданы серверу, а информация о созданном объекте появится в консоли сервера.</p>
+                        <ul>
+                            <li>Ежедневно с 10:00 до 23:00</li>
+                            <li>Телефон: +999-888-76-54</li>
+                            <li>Санкт-Петербург</li>
+                        </ul>
+                    </aside>
+                    <form class="booking-form" id="booking-form">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="guest-name">Ваше имя</label>
+                                <input id="guest-name" name="name" type="text" placeholder="Например, Анна" required minlength="2">
+                            </div>
+                            <div class="form-field">
+                                <label for="guest-phone">Телефон</label>
+                                <input id="guest-phone" name="phone" type="tel" placeholder="+7 (999) 123-45-67" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="booking-date">Дата</label>
+                                <input id="booking-date" name="date" type="date" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="booking-time">Время</label>
+                                <input id="booking-time" name="time" type="time" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="guests">Количество гостей</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="" selected disabled>Выберите</option>
+                                    <option value="1">1 гость</option>
+                                    <option value="2">2 гостя</option>
+                                    <option value="3">3 гостя</option>
+                                    <option value="4">4 гостя</option>
+                                    <option value="5">5 гостей</option>
+                                    <option value="6">6 гостей</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="occasion">Повод</label>
+                                <select id="occasion" name="occasion">
+                                    <option value="Обычный визит">Обычный визит</option>
+                                    <option value="День рождения">День рождения</option>
+                                    <option value="Деловая встреча">Деловая встреча</option>
+                                    <option value="Свидание">Свидание</option>
+                                </select>
+                            </div>
+                            <div class="form-field form-field--wide">
+                                <label for="comment">Пожелания</label>
+                                <textarea id="comment" name="comment" placeholder="Напишите, если у вас есть особые пожелания"></textarea>
+                            </div>
+                        </div>
+                        <label class="consent">
+                            <input type="checkbox" name="consent" required><span>Согласен(на) на обработку персональных данных для связи по заявке.</span>
+                        </label>
+                        <button class="button" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="container site-footer__inner">
+                <span>© 2026 La Maison. Все права защищены.</span>
+                <span>Ежедневно · 10:00–23:00 · +999-888-76-54</span>
+            </div>
+        </footer>
+        <script src="js/booking.js" defer></script>
+    </body>
+</html>
